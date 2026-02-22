@@ -84,7 +84,7 @@ public class GamePanel extends JPanel implements Runnable {
 
     public void run() {
 
-        double drawInterval = 1000000000 / FPS;
+        double drawInterval = (double) 1000000000 / FPS;
         double delta = 0;
         long lastTime = System.nanoTime();
         long currentTime;
@@ -115,25 +115,25 @@ public class GamePanel extends JPanel implements Runnable {
     }
 
     public void keyCheck() {
-        if (keyH.upPressed == true) {
+        if (keyH.upPressed) {
             playerY -= playerSpeed;
-        } else if (keyH.downPressed == true) {
+        } else if (keyH.downPressed) {
             playerY += playerSpeed;
         }
 
-        if (keyH.leftPressed == true) {
+        if (keyH.leftPressed) {
             playerX -= playerSpeed;
-        } else if (keyH.rightPressed == true) {
+        } else if (keyH.rightPressed) {
             playerX += playerSpeed;
         }
 
-        if (keyH.spacePressed == true) {
+        if (keyH.spacePressed) {
             playerColor = Color.blue;
         } else {
             playerColor = Color.white;
         }
 
-        if (keyH.shiftPressed == true){
+        if (keyH.shiftPressed){
             playerSpeed = 8;
         } else{
             playerSpeed = 4;

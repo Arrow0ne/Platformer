@@ -54,9 +54,6 @@ public class KeyHandler implements KeyListener {
         if(code == KeyEvent.VK_D){
             rightPressed = false;
         }
-        if(code == KeyEvent.VK_SPACE){
-            spacePressed = false;
-        }
         if(code == KeyEvent.VK_SHIFT){
             shiftPressed = false;
         }
